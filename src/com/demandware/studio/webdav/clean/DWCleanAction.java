@@ -1,6 +1,6 @@
 package com.demandware.studio.webdav.clean;
 
-import com.demandware.studio.projectWizard.DWModuleType;
+import com.demandware.studio.projectWizard.SFCCModuleType;
 import com.demandware.studio.webdav.DWServerConnection;
 import com.intellij.openapi.actionSystem.AnAction;
 import com.intellij.openapi.actionSystem.AnActionEvent;
@@ -19,7 +19,7 @@ public class DWCleanAction extends AnAction {
 
         if (project != null) {
             for (Module module : ModuleManager.getInstance(project).getModules()) {
-                if (ModuleType.get(module) instanceof DWModuleType) {
+                if (ModuleType.get(module) instanceof SFCCModuleType) {
                     ModuleServiceManager.getService(module, DWServerConnection.class);
                     ProgressManager.getInstance().run(
                             new DWCleanTask(project, module, "Cleaning cartridges...", true, PerformInBackgroundOption.ALWAYS_BACKGROUND)

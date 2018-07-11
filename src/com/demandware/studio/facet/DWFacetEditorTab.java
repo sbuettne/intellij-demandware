@@ -108,6 +108,6 @@ public class DWFacetEditorTab extends FacetEditorTab {
     @Nls
     @Override
     public String getDisplayName() {
-        return "Demandware";
+        return "Commerce Cloud";
     }
 }

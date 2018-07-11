@@ -1,5 +1,5 @@
-# Intellij Demandware Plugin
-## Develop Demandware with Pleasure!
+# Intellij SFCC Plugin
+## Develop Commerce Cloud with Pleasure!
 
 ### Features
  * Project wizard to setup a project or new module with ease.
@@ -31,7 +31,7 @@ In the future this plugin may be added to the plugin repo
 for installation through the plugin manager using the 'Browse repositories...' option.
 
 ### Project Setup
-Follow the Demandware project wizard in order to enter your server settings. Once the project
+Follow the SFCC project wizard in order to enter your server settings. Once the project
 is loaded right click on the cartridges you would like to have synced to the server. Select
 'Mark Directory As' from the context menu and mark the directory as 'Sources Root.' This will
 let the plugin know to sync the cartridge. This functionality is planned to change in the future

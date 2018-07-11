@@ -1,19 +1,19 @@
 package com.demandware.studio.facet;
 
-import com.demandware.studio.projectWizard.DWModuleType;
+import com.demandware.studio.SFCCIcons;
+import com.demandware.studio.projectWizard.SFCCModuleType;
 import com.intellij.facet.Facet;
 import com.intellij.facet.FacetType;
 import com.intellij.facet.FacetTypeId;
 import com.intellij.openapi.module.Module;
 import com.intellij.openapi.module.ModuleType;
-import com.intellij.openapi.util.IconLoader;
 import org.jetbrains.annotations.NotNull;
 
 import javax.swing.*;
 
 public class DWFacetType extends FacetType<DWFacet, DWFacetConfiguration> {
-    public static final String STRING_ID = "demandware";
-    public static final String PRESENTABLE_NAME = "Demandware";
+    public static final String STRING_ID = "sfcc";
+    public static final String PRESENTABLE_NAME = "SFCC";
     public static final FacetTypeId<DWFacet> ID = new FacetTypeId<DWFacet>(STRING_ID);
     public static final DWFacetType INSTANCE = new DWFacetType();
 
@@ -33,7 +33,7 @@ public class DWFacetType extends FacetType<DWFacet, DWFacetConfiguration> {
 
     @Override
     public boolean isSuitableModuleType(ModuleType moduleType) {
-        return moduleType instanceof DWModuleType;
+        return moduleType instanceof SFCCModuleType;
     }
 
     @Override
@@ -43,6 +43,6 @@ public class DWFacetType extends FacetType<DWFacet, DWFacetConfiguration> {
 
     @Override
     public Icon getIcon() {
-        return IconLoader.getIcon("/icons/demandware.png");
+        return SFCCIcons.SFCC_ICON;
     }
 }

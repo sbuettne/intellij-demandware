@@ -70,13 +70,13 @@ public class DWUpdateFileTask extends Task.Backgroundable {
             }
 
             if (response.getStatusLine().getStatusCode() == 401) {
-                Notifications.Bus.notify(new Notification("Demandware", "Unauthorized Request",
-                    "Please check your server configuration in the Demandware facet settings.", NotificationType.INFORMATION));
+                Notifications.Bus.notify(new Notification("SFCC", "Unauthorized Request",
+                    "Please check your server configuration in the SFCC facet settings.", NotificationType.INFORMATION));
                 return;
             }
         } catch (UnknownHostException e) {
-            Notifications.Bus.notify(new Notification("Demandware", "Unknown Host",
-                "Please check your server configuration in the Demandware facet settings.", NotificationType.INFORMATION));
+            Notifications.Bus.notify(new Notification("SFCC", "Unknown Host",
+                "Please check your server configuration in the SFCC facet settings.", NotificationType.INFORMATION));
             return;
         } catch (IOException e) {
             e.printStackTrace();

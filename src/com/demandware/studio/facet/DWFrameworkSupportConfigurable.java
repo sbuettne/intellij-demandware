@@ -20,7 +20,7 @@ public class DWFrameworkSupportConfigurable extends FrameworkSupportConfigurable
     DWFrameworkSupportConfigurablePanel dwFrameworkSupportConfigurablePanel;
 
     public DWFrameworkSupportConfigurable(FrameworkSupportModel model) {
-        model.setFrameworkComponentEnabled("Demandware", true);
+        model.setFrameworkComponentEnabled("SFCC", true);
         dwFrameworkSupportConfigurablePanel = new DWFrameworkSupportConfigurablePanel();
     }
 
@@ -41,7 +41,7 @@ public class DWFrameworkSupportConfigurable extends FrameworkSupportConfigurable
         dwSettingsProvider.setPassword(dwFrameworkSupportConfigurablePanel.getPassword());
         dwSettingsProvider.setVersion(dwFrameworkSupportConfigurablePanel.getVersion());
         dwSettingsProvider.setAutoUploadEnabled(dwFrameworkSupportConfigurablePanel.getAutoUploadEnabled());
-        Facet facet = FacetManager.getInstance(modifiableRootModel.getModule()).addFacet(DWFacetType.INSTANCE, "Demandware", null);
+        Facet facet = FacetManager.getInstance(modifiableRootModel.getModule()).addFacet(DWFacetType.INSTANCE, "SFCC", null);
         facetModel.addFacet(facet);
         facetModel.commit();
     }

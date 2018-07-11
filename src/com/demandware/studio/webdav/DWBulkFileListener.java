@@ -1,6 +1,6 @@
 package com.demandware.studio.webdav;
 
-import com.demandware.studio.projectWizard.DWModuleType;
+import com.demandware.studio.projectWizard.SFCCModuleType;
 import com.demandware.studio.settings.DWSettingsProvider;
 import com.intellij.openapi.application.ApplicationManager;
 import com.intellij.openapi.components.ApplicationComponent;
@@ -66,7 +66,7 @@ public class DWBulkFileListener implements ApplicationComponent, BulkFileListene
                             return;
                         }
 
-                        if (CurrentModuleType instanceof DWModuleType) {
+                        if (CurrentModuleType instanceof SFCCModuleType) {
                             for (VirtualFile sourceRoot : ModuleRootManager.getInstance(module).getSourceRoots()) {
                                 if (eventFile.getPath().contains(sourceRoot.getPath())) {
                                     ProgressManager.getInstance().run(

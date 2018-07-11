@@ -1,11 +1,11 @@
 <idea-plugin version="2">
   <id>com.demandware.studio</id>
-  <name>Demandware Studio Plugin</name>
+  <name>SFCC Studio Plugin</name>
   <version>0.1.0</version>
   <vendor email="nek4life@gmail.com">Charlie Choiniere</vendor>
 
   <description><![CDATA[
-      Demandware development tools. JDK8+ Required.
+      Salesforce Commerce Cloud development tools. JDK8+ Required.
     ]]></description>
 
   <change-notes><![CDATA[
@@ -23,10 +23,10 @@
   <extensions defaultExtensionNs="com.intellij">
     <!-- Module Extensions -->
     <projectService serviceImplementation="com.demandware.studio.toolWindow.DWConsoleService"/>
-    <moduleType id="DW_MODULE" implementationClass="com.demandware.studio.projectWizard.DWModuleType"/>
+    <moduleType id="SFCC_MODULE" implementationClass="com.demandware.studio.projectWizard.SFCCModuleType"/>
     <moduleService serviceImplementation="com.demandware.studio.settings.DWSettingsProvider"/>
     <moduleService serviceImplementation="com.demandware.studio.webdav.DWServerConnection"/>
-    <toolWindow id="Demandware" icon="/icons/demandwareAction.png" anchor="bottom" factoryClass="com.demandware.studio.toolWindow.DWToolWindowFactory"/>
+    <toolWindow id="SFCC" icon="/icons/sfcc-action.png" anchor="bottom" factoryClass="com.demandware.studio.toolWindow.DWToolWindowFactory"/>
     <facetType implementation="com.demandware.studio.facet.DWFacetType"/>
     <frameworkSupport implementation="com.demandware.studio.facet.DWFrameworkSupportProvider"/>
     <!-- ISML Extensions-->
@@ -53,13 +53,13 @@
   </project-components>
 
   <actions>
-    <group id="DWActionGroup" text="Demandware" popup="true">
+    <group id="DWActionGroup" text="SFCC" popup="true">
       <add-to-group group-id="ProjectViewPopupMenu" anchor="last" />
       <add-to-group group-id="EditorPopupMenu" anchor="last"/>
     </group>
 
     <action id="com.demandware.studio.webdav.clean.DWCleanAction" class="com.demandware.studio.webdav.clean.DWCleanAction"
-            text="Clean Cartridges" description="Clean Cartridges" icon="/icons/demandwareAction.png">
+            text="Clean Cartridges" description="Clean Cartridges" icon="/icons/sfcc-action.png">
       <add-to-group group-id="BuildMenu" anchor="last"/>
 
       <add-to-group group-id="DWActionGroup" />

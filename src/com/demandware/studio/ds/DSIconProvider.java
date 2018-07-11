@@ -1,6 +1,6 @@
 package com.demandware.studio.ds;
 
-import com.demandware.studio.DWIcons;
+import com.demandware.studio.SFCCIcons;
 import com.intellij.ide.IconProvider;
 import com.intellij.psi.PsiElement;
 import com.intellij.psi.PsiFile;
@@ -16,7 +16,7 @@ public class DSIconProvider extends IconProvider {
         PsiFile containingFile = element.getContainingFile();
         if (containingFile != null) {
             if (containingFile.getName() != null && containingFile.getName().endsWith(".ds")) {
-                return DWIcons.DW_DS_ICON;
+                return SFCCIcons.DS_ICON;
             }
         }
         return null;
